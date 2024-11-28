@@ -5,7 +5,7 @@ instead of [some](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 [kind](https://github.com/ulid/spec) of unreadable id. The most annoying part is
 probably compiling that list of words, so here it is done for you.
 
-## Usage
+## API
 
 Default usage will get you a three-word slug, separated by hyphens:
 
@@ -16,7 +16,9 @@ const slug = generateRandomSlug();
 
 ### generateRandomSlug(generateSlugArguments)
 
-#### generateSlugArguments _(optional)_
+#### generateSlugArguments
+
+Optional object with the following values:
 
 - `separator` _(optional)_: the string that will separate each word in the slug
   - **type**: `string`
