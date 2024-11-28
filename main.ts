@@ -710,10 +710,22 @@ const defaultSeparator: string = "-";
  */
 type GenerateSlugArguments = {
   /**
-   * optional override to
+   * optional override for string that separates words
+   *
+   * default: `-`
    */
   separator?: string;
+
+  /**
+   * optional override if you would like to provide your own word list
+   */
   wordList?: string[];
+
+  /**
+   * optional override if you would like a different slug length
+   *
+   * default: `3`
+   */
   wordQuantity?: number;
 };
 
@@ -725,6 +737,32 @@ const defaultArguments: GenerateSlugArguments = {
 
 type GenerateSlug = (arg?: GenerateSlugArguments) => string;
 
+/**
+ * function that generates a random slug
+ *
+ * @param {Object} [args]                  - {@linkcode GenerateSlugArguments}
+ * @param {string} [args.seprator='-']     - {@linkcode GenerateSlugArguments.separator}
+ * @param {string[]} [args.wordList=[]]    - {@linkcode GenerateSlugArguments.wordList}
+ * @param {string} [args.wordQuantity='3'] - {@linkcode GenerateSlugArguments.wordQuantity}
+ *
+ * @returns {string} a random slug
+ *
+ * @example default
+ *
+ * ```ts
+ * const slug = generateRandomSlug();
+ * // 'permission-zodiac-guitar'
+ * ```
+ *
+ * @example override
+ *
+ * ```ts
+ * const customSlug = generateRandomSlug({
+ *   separator: "_",
+ *   wordList: ["foo", "bar", "baz"],
+ *   wordQuantity: 2;
+ * });
+ */
 export const generateRandomSlug: GenerateSlug = ({
   separator = defaultSeparator,
   wordList = defaultWordList,
