@@ -44,7 +44,7 @@ Deno.test("respects word list override", () => {
   const words = ["foo", "bar", "baz"];
   const customWordList = new Array(5).fill(words).flat();
   const parsedSlug = generateRandomSlug({ wordList: customWordList }).split(
-    "-"
+    "-",
   );
   const filteredSlug = parsedSlug.filter((i) => words.includes(i));
 
@@ -57,7 +57,7 @@ Deno.test(
     assertThrows(() =>
       generateRandomSlug({ wordList: ["foo", "bar", "baz"], wordQuantity: 10 })
     );
-  }
+  },
 );
 
 Deno.bench({
