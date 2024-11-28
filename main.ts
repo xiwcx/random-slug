@@ -1,3 +1,8 @@
+/**
+ * default word list
+ *
+ * @constant {string[]}
+ */
 export const defaultWordList: string[] = [
   // adjectives
   "abundant",
