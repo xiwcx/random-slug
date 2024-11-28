@@ -1,6 +1,9 @@
 # Random Slugs
 
-There are some cases where it is convenient to have a human readable slug instead of [some](https://en.wikipedia.org/wiki/Universally_unique_identifier) [kind](https://github.com/ulid/spec) of unreadable id. The most annoying part is probably compiling that list of words, so here it is done for you.
+There are some cases where it is convenient to have a human readable slug
+instead of [some](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+[kind](https://github.com/ulid/spec) of unreadable id. The most annoying part is
+probably compiling that list of words, so here it is done for you.
 
 ## Usage
 
@@ -18,10 +21,12 @@ const slug = generateRandomSlug();
 - `separator` _(optional)_: the string that will separate each word in the slug
   - **type**: `string`
   - **default**: `-`
-- `wordList` _(optional_): this allows you to override the default list with your own custom list
+- `wordList` _(optional_): this allows you to override the default list with
+  your own custom list
   - **type**: `string[]`
   - **default**: (view source)
-- `wordQuantity` _(optional_): this allows you to generate slugs of different lengths
+- `wordQuantity` _(optional_): this allows you to generate slugs of different
+  lengths
   - **type**: `number`
   - **default**: 3
 
@@ -36,9 +41,11 @@ const customSlug = generateRandomSlug({
 
 ## Details
 
-The list is 682 words long. For three word slugs this results in 315,821,241 potential combinations.
+The list is 682 words long. For three word slugs this results in 315,821,241
+potential combinations.
 
-As a bonus, this is 15 times faster (but less featured) than the most popular NPM package:
+As a bonus, this is 15 times faster (but less featured) than the most popular
+NPM package:
 
 ```
     CPU | Apple M1 Pro

@@ -31,7 +31,7 @@ jobs:
           deno-version: "^2.1"
 
       - name: Verify formatting
-        run: deno fmt --ignore="README.md" --check
+        run: deno fmt --check
 
       - name: Run linter
         run: deno lint
